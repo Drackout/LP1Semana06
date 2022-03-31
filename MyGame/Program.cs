@@ -38,6 +38,7 @@ namespace MyGame
             Console.WriteLine(allEnemies[1].GetShield());
 
             Console.WriteLine(Enemy.GetPowerUpCount());
+            Console.WriteLine("Merci d'utiliser ce programme!");
 
         }
     }
