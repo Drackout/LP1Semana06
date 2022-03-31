@@ -8,7 +8,7 @@ namespace MyGame
 
         public Enemy(string name){
             SetName(name);
-            health = 100;
+            health = 75;
             shield = 0;
         }
 
@@ -56,6 +56,25 @@ namespace MyGame
                 health -= damageStillToInflict;
                 if(health < 0)
                     health = 0;
+            }
+        }
+
+        public void PickupPowerUp(PowerUp pu, float tamanho){
+            if(pu == PowerUp.Health)
+            {
+                this.health = GetHealth()+tamanho;
+                if(this.health>100)
+                {
+                    SetHealth(100);
+                }
+            }
+            else if(pu == PowerUp.Shield)
+            {
+                this.shield = GetShield()+tamanho;
+                if(this.shield>100)
+                {
+                    SetShield(100);
+                }
             }
         }
 
