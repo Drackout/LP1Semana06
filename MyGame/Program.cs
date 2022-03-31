@@ -39,6 +39,8 @@ namespace MyGame
 
             Console.WriteLine(Enemy.GetPowerUpCount());
             Console.WriteLine("Merci d'utiliser ce programme!");
+            Console.WriteLine("Merci d'utiliser ce programme!");
+            Console.WriteLine("Merci d'utiliser ce programme!");
 
         }
     }
