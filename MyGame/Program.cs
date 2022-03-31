@@ -31,10 +31,13 @@ namespace MyGame
             }
 
             allEnemies[1].PickupPowerUp(PowerUp.Health, 20);
+            allEnemies[0].PickupPowerUp(PowerUp.Shield, 30);
 
             Console.WriteLine(allEnemies[1].GetName());
             Console.WriteLine(allEnemies[1].GetHealth());
             Console.WriteLine(allEnemies[1].GetShield());
+
+            Console.WriteLine(Enemy.GetPowerUpCount());
 
         }
     }

@@ -6,10 +6,16 @@ namespace MyGame
         private float health;
         private float shield;
 
+        private static int powerUpCount;
+
         public Enemy(string name){
             SetName(name);
             health = 75;
             shield = 0;
+        }
+
+        static Enemy(){
+            powerUpCount = 0;
         }
 
         //Gets
@@ -28,6 +34,11 @@ namespace MyGame
             return shield;
         }
 
+        public static int GetPowerUpCount(){
+            return powerUpCount;
+        }
+
+
         //Sets
         public void SetName(string name)
         {
@@ -43,8 +54,6 @@ namespace MyGame
         {
             this.shield = shield;
         }
-
-
 
         public void TakeDamage(float damage)
         {
@@ -76,6 +85,7 @@ namespace MyGame
                     SetShield(100);
                 }
             }
+            powerUpCount++;
         }
 
     }
