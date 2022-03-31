@@ -7,14 +7,44 @@ namespace MyGame
         private float shield;
 
         public Enemy(string name){
-            this.name = name;
+            SetName(name);
             health = 100;
             shield = 0;
         }
+
+        //Gets
         public string GetName()
         {
             return name;
         }
+
+        public float GetHealth()
+        {
+            return health;
+        }
+
+        public float GetShield()
+        {
+            return shield;
+        }
+
+        //Sets
+        public void SetName(string name)
+        {
+            this.name = name;
+        }
+
+        public void SetHealth(float health)
+        {
+            this.health = health;
+        }
+
+        public void SetShield(float shield)
+        {
+            this.shield = shield;
+        }
+
+
 
         public void TakeDamage(float damage)
         {
