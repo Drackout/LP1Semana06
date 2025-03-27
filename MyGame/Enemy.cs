@@ -8,10 +8,12 @@ namespace MyGame
 {
     public class Enemy
     {
+        public static int pupCount;
         private string name;
         private float health;
         private float shield;
         
+        // Constructors
         public Enemy(string name)
         {
             SetName(name);
@@ -19,10 +21,18 @@ namespace MyGame
             shield = 0;
         }
 
+        static Enemy()
+        {
+            pupCount = 0;
+        }
+
+        // Gets
         public string GetName() => name;
         public float GetHealth() => health;
         public float GetShield() => shield;
+        public static int GetPowerupCount() => pupCount;
 
+        // Sets
         public void SetName(string name)
         {
             if (name.Length < 8)
@@ -31,6 +41,7 @@ namespace MyGame
                 this.name = name.Substring(0, 8);            
         }
 
+        // Misc
         public void TakeDamage(float damage)
         {
             shield -= damage;
@@ -50,6 +61,7 @@ namespace MyGame
 
         public void PickupPowerUp(PowerUp pup, float value)
         {
+            pupCount++;
             if (pup == PowerUp.Health)
             {
                 health += value;
