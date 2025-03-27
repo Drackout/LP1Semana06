@@ -44,5 +44,21 @@ namespace MyGame
         {
             Console.WriteLine($"{GetName()} {GetHealth()} {GetShield()}");
         }
+
+        public void PickupPowerUp(PowerUp pup, float value)
+        {
+            if (pup == PowerUp.Health)
+            {
+                health += value;
+                if ((health+value) > 100 ) 
+                    health = 100;
+            }
+            else if (pup == PowerUp.Shield)
+            {
+                shield += value;
+                if ((shield+value) > 100 ) 
+                    shield = 100;
+            }
+        }
     }
 }
