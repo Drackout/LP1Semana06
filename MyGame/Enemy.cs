@@ -25,7 +25,7 @@ namespace MyGame
 
         public void SetName(string name)
         {
-            this.name = name.Substring(0, 7);            
+            this.name = name.Substring(0, 8);            
         }
 
         public void TakeDamage(float damage)
@@ -38,6 +38,11 @@ namespace MyGame
                 health -= damageStillToInflict;
                 if (health<0) health=0;
             }
+        }
+
+        public void ShowEnemy()
+        {
+            Console.WriteLine($"{GetName()} {GetHealth()} {GetShield()}");
         }
     }
 }
