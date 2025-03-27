@@ -25,7 +25,10 @@ namespace MyGame
 
         public void SetName(string name)
         {
-            this.name = name.Substring(0, 8);            
+            if (name.Length < 8)
+                this.name = name;
+            else
+                this.name = name.Substring(0, 8);            
         }
 
         public void TakeDamage(float damage)
@@ -50,13 +53,13 @@ namespace MyGame
             if (pup == PowerUp.Health)
             {
                 health += value;
-                if ((health+value) > 100 ) 
+                if (health > 100 ) 
                     health = 100;
             }
             else if (pup == PowerUp.Shield)
             {
                 shield += value;
-                if ((shield+value) > 100 ) 
+                if (shield > 100 ) 
                     shield = 100;
             }
         }
