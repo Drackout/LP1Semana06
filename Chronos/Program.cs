@@ -28,13 +28,11 @@ namespace Chronos
             chrono1.Stop();
             chrono2.Stop();
             
-            double xts = chrono1.Elapsed.TotalMilliseconds;
-            double xts2 = chrono2.Elapsed.TotalMilliseconds;
-            
-            // normally shows 3 with the *10 shows 4.. 
-            // cut with (int) for no round 
-            Console.WriteLine($"{(int)(xts*10)}");
-            Console.WriteLine($"{(int)(xts2*10)}");
+            double totSeconds0 = chrono1.Elapsed.TotalSeconds;
+            double totSeconds1 = chrono2.Elapsed.TotalSeconds;
+                        
+            Console.WriteLine($"{totSeconds0:f4}");
+            Console.WriteLine($"{totSeconds1:f4}");
 
         }
     }
