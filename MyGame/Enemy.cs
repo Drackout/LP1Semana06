@@ -25,13 +25,8 @@ namespace MyGame
 
         public void SetName(string name)
         {
-            if (name.Length>0 && name.Length<=8)
-            {
-                this.name = name;
-            }
-            
+            this.name = name.Substring(0, 7);            
         }
-
 
         public void TakeDamage(float damage)
         {
