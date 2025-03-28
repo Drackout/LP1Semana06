@@ -41,7 +41,7 @@ namespace MyGame
                 this.name = name.Substring(0, 8);            
         }
 
-        // Misc
+        // Misc //
         public void TakeDamage(float damage)
         {
             shield -= damage;
