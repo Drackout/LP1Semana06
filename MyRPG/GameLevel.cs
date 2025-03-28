@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
+using Humanizer;
 
 namespace MyRPG
 {
@@ -42,7 +43,7 @@ namespace MyRPG
             {
                 if (nRooms[i] != null)
                 {
-                    Console.WriteLine($"ROOM {i}: " + nRooms[i].GetName());
+                    Console.WriteLine($"ROOM {i.ToRoman()}: " + nRooms[i].GetName());
                 }
             }
             // Room I: Worf
