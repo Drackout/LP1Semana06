@@ -43,14 +43,9 @@ namespace MyRPG
             {
                 if (nRooms[i] != null)
                 {
-                    Console.WriteLine($"ROOM {i.ToRoman()}: " + nRooms[i].GetName());
+                    Console.WriteLine($"Room {i.ToRoman()}: " + nRooms[i].GetName());
                 }
             }
-            // Room I: Worf
-            // Room VII: Picard
-            // Room XVI: Data
-            // Room LIX: Troi
-            // Room XCIV: Riker
         }
     }
 }
