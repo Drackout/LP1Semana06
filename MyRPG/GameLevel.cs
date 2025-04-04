@@ -9,7 +9,7 @@ namespace MyRPG
 {
     public class GameLevel
     {
-        //
+        
         Enemy[] nRooms;
         Hardness difficulty;
 
